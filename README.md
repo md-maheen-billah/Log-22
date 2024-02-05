@@ -123,7 +123,7 @@ console.log("Average price of phone = ", total);
 ```
 ---
 ### Practice Task-5:
-For each employee their current salary is calculated by multiplying yearly increment with experience then adding the result to the starting salary. Now calculate is the total salary has to be provided by the company in a month.
+For each employee their current salary is calculated by multiplying yearly increment with experience then adding the result to the starting salary. Now calculate the total salary to be provided by the company in a month.
 
         const employees = [
             { name: "shahin", experience: 5, starting: 20000, increment: 5000 },
