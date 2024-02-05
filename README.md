@@ -123,25 +123,40 @@ console.log("Average price of phone = ", total);
 ```
 ---
 ### Practice Task-5:
-Find the lowest number in the array below.
-`const heights2 = [167, 190, 120, 165, 137];`
+For each employee their current salary is calculated by multiplying yearly increment with experience then adding the result to the starting salary. Now calculate is the total salary has to be provided by the company in a month.
+
+        const employees = [
+            { name: "shahin", experience: 5, starting: 20000, increment: 5000 },
+            { name: "shihab", experience: 3, starting: 15000, increment: 7000 },
+            { name: "shikot", experience: 9, starting: 30000, increment: 1000 },
+            { name: "shohel", experience: 0, starting: 29000, increment: 4000 },
+        ];
+
+        
 ```js
-function getMin(numbers) {
-  let min = numbers[0];
-  for (const num of numbers) {
-    if (num < min) {
-      min = num;
-    }
+function findTotalSalary(employees) {
+  let total = 0;
+  for (const employee of employees) {
+    const totalIncrement = employee.experience * employee.increment;
+    const salary = employee.starting + totalIncrement;
+    total = total + salary;
   }
-  return min;
+  return total;
 }
 
-const heights2 = [167, 190, 120, 165, 137];
-const min = getMin(heights2);
-console.log("Lowest number is", min);
-
-// PS C:\Projects\Log-22> node practice2.js
-// Lowest number is 120
+const employees = [
+  { name: "shahin", experience: 5, starting: 20000, increment: 5000 },
+  { name: "shihab", experience: 3, starting: 15000, increment: 7000 },
+  { name: "shikot", experience: 9, starting: 30000, increment: 1000 },
+  { name: "shohel", experience: 0, starting: 29000, increment: 4000 },
+];
+const total = findTotalSalary(employees);
+console.log(
+  "Total salary has to be provided by the company in a month = ",
+  total
+);
+// PS C:\Projects\Log-22> node practice5.js
+// Total salary has to be provided by the company in a month =  149000
 
 ```
 ---
