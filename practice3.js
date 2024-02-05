@@ -1,18 +1,22 @@
-function moneyAmount(shirtQuantity, pantQuantity, shoeQuantity) {
-  const perShirtMoney = 500;
-  const perPantMoney = 300;
-  const perShoeMoney = 900;
+function calculateElectronicsBudget(
+  laptopQuantity,
+  tabletQuantity,
+  mobileQuantity
+) {
+  const perLaptopMoney = 35000;
+  const perTabletMoney = 15000;
+  const perMobileMoney = 20000;
 
-  const shirtTotalMoney = shirtQuantity * perShirtMoney;
-  const pantTotalMoney = pantQuantity * perPantMoney;
-  const shoeTotalMoney = shoeQuantity * perShoeMoney;
+  const laptopTotalMoney = laptopQuantity * perLaptopMoney;
+  const tabletTotalMoney = tabletQuantity * perTabletMoney;
+  const mobileTotalMoney = mobileQuantity * perMobileMoney;
 
-  const totalMoney = shirtTotalMoney + pantTotalMoney + shoeTotalMoney;
+  const totalMoney = laptopTotalMoney + tabletTotalMoney + mobileTotalMoney;
 
   return totalMoney;
 }
-const money = moneyAmount(2, 2, 1);
-console.log("Money Needed", money);
+const money = calculateElectronicsBudget(2, 2, 1);
+console.log("Total budget is", money);
 
 // PS C:\Projects\Log-22> node practice3.js
-// Money Needed 2500
+// Total budget is 120000

@@ -1,16 +1,18 @@
-function getMin(numbers) {
-  let min = numbers[0];
-  for (const num of numbers) {
-    if (num < min) {
-      min = num;
+function findSmallestName(inputArray) {
+  let smallestName = inputArray[0];
+  let minLength = inputArray[0].length;
+
+  for (const word of inputArray) {
+    if (word.length < minLength) {
+      smallestName = word;
+      minLength = word.length;
     }
   }
-  return min;
+  return smallestName;
 }
 
-const heights = [65, 66, 68, 72, 78, 60, 65, 66];
-const min = getMin(heights);
-console.log("min value is", min);
-
+const inputArray = ["rahim", "robin", "rafi", "ron", "rashed"];
+const smallestName = findSmallestName(inputArray);
+console.log(smallestName);
 // PS C:\Projects\Log-22> node practice2.js
-// min value is 60
+// ron
